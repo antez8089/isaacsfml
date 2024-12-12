@@ -1,0 +1,43 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: g++.exe kompiluj aktywny plik",
+            // "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++17",
+                "-fdiagnostics-color=always",
+                "-g",
+                "${workspaceFolder}/*.cpp",
+                "${workspaceFolder}/../src/entity/health/*.cpp",
+                "${workspaceFolder}/../src/entity/*.cpp",
+                "${workspaceFolder}/../src/entity/bullets/*.cpp",
+                "${workspaceFolder}/../src/entity/characters/*.cpp",
+                "${workspaceFolder}/../src/map/*.cpp",
+                "${workspaceFolder}/../src/menu/*.cpp",
+                "${workspaceFolder}/../src/exceptions/*.cpp",
+                "${workspaceFolder}/../src/room/*.cpp",
+                "-o",
+                "${workspaceFolder}/${workspaceFolderBasename}",
+                "-lsfml-window",
+                "-lsfml-system",
+                "-lsfml-graphics",
+                "-Wall",
+                "-Werror"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Zadanie wygenerowane przez debuger."
+        }
+    ],
+    "version": "2.0.0"
+}
